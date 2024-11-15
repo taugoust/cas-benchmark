@@ -2,6 +2,7 @@
 #include <pthread.h>
 #include <time.h>
 #include <stdlib.h>
+#include <stdio.h>
 
 /*
   #define NUM_THREADS 8
@@ -46,7 +47,7 @@ int main(int argc, char **argv) {
 		fprintf(stderr, "Usage: %s nr_threads nr_vars\n", argv[0]);
 		return EXIT_FAILURE;
 	}
-    
+
 	int NUM_THREADS = atoi(argv[1]), NUM_VARS = atoi(argv[2]);
 	pthread_t thread_id[NUM_THREADS];
 	struct Thread_arg args[NUM_THREADS];
