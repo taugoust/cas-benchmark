@@ -3,7 +3,7 @@ bin=cas.$(shell uname -m)
 all: $(bin)
 
 $(bin): cas.c
-	g++ -O3 -lm -pthread -o $@ $<
+	$(CC) -O3 -lm -pthread -o $@ $<
 
 clean:
 	rm -rf *~ *.o
